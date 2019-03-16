@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8" />
+    <title>Three.js</title>
+      <!--  Simple reset to delete the margins  -->
+      <style>
+        body { margin: 0; }
+        canvas { width: 100%; height: 100% }
+        #video{
+           position: fixed;
+           left:0;
+           bottom:0;}
+      </style>
+      <!--  Three.js CDN  -->
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/96/three.min.js"></script>-->
+
+  </head>
+  <body onload="draw();">
+  <video id="video" autoplay controls >
+
+  <source src="textures/op (black).mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+  </video>
+  <script src="https://cdn.bootcss.com/three.js/91/three.min.js"></script>
+  <script src="/lib/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.bootcss.com/stats.js/r17/Stats.min.js"></script>
+  <script src="https://cdn.bootcss.com/dat-gui/0.7.1/dat.gui.min.js"></script>
+  <script src="/lib/js/Detector.js"></script>！
+  <script src="js/index.js"></script>
+  </body>
+</html>
