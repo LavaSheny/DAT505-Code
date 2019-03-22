@@ -19,7 +19,7 @@ function init() {
 	speed.push(randomValue);
 
   //Generate a random number from 1 to 4 (according to the image files)
-	var randomSelection = Math.round(Math.random()*5) + 1;
+	var randomSelection = Math.round(Math.random()*4);
 
 	// Load a texture
 	texture = new THREE.TextureLoader().load(  "textures/texture" + randomSelection +".jpg" );
@@ -29,7 +29,7 @@ function init() {
 
 	// Combine the geometry and material into a mesh
 	mesh = new THREE.Mesh( geometry, material );
-	mesh.position.y =30;
+	mesh.position.y =40;
 	// Add the mesh to the scene
 	scene.add( mesh );
 	cubes.push(mesh);
