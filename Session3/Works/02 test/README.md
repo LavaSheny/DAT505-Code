@@ -1,4 +1,6 @@
-## 02 test ##
+02 test
+========
+
 This project is to practise controlling the objects' positons and their color with gui to make up a pattern.
 
 #### Description ####

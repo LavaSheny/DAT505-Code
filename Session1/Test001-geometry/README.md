@@ -1,8 +1,10 @@
-## Test001-geometry ##
+Test001-geometry
+========
+
 This project is to practise creating a composition that consists of multiple geometric objects. Each objects have different materials, positons and rotations.
 
 #### Description ####
-There is a wireframe `IcosahedronGeometry` and some `BoxGeometries` which rotate in different speeds in the scene. Two spheres stay in the center of screen.
+There is a wireframe `IcosahedronGeometry` and some `BoxGeometries` which rotate in different speeds in the scene. Two spheres stay on the center of screen.
 
 #### Usage ####
 ```html

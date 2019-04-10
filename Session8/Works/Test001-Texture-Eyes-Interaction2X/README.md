@@ -1,9 +1,10 @@
-## Test001-Texture-Eyes-Interaction2X ##
+Test001-Texture-Eyes-Interaction2X
+========
 
 This project is to practise calculating how to extract values and compare them with the objects' rotation of example.
 
 #### Description ####
-There are 5 eyes in the screen, one is a target in the center of screen that other eyes look at it continuously. Two example eyes are lacated on the top left and bottom left of the screen. In order to make other eyes look at the center one, I should calculate the range of mouseX and mouseY of the remaining two eyes.
+There are 5 eyes on the screen, one is a target in the center of screen that other eyes look at it continuously. Two example eyes are lacated on the top left and bottom left of the screen. In order to make other eyes look at the center one, I should calculate the range of mouseX and mouseY of the remaining two eyes.
 
 #### Usage ####
 ```html
@@ -25,14 +26,15 @@ init();
 animate();
 
 function init() {
+	container = document.createElement( 'div' );
+	document.body.appendChild( container );
 	renderer = new THREE.WebGLRenderer();
 	renderer.setPixelRatio( window.devicePixelRatio );
 	renderer.setSize( window.innerWidth, window.innerHeight );
 	container.appendChild( renderer.domElement );
 	document.addEventListener( 'mousemove', onDocumentMouseMove, false );
 	window.addEventListener( 'resize', onWindowResize, false );
-	container = document.createElement( 'div' );
-	document.body.appendChild( container );
+
 
 	scene = new THREE.Scene();
 
@@ -148,7 +150,7 @@ function render() {
 }
 ```
 
-* Define the `mousemove` event and the formula of `map_range` to let the value of mouseX and mouseY can be put into the formula of `map_range`.
+* Define the `mousemove` event and the formula of `map_range` to let the value of mouseX and mouseY can be put into the formula of `map_range`. `windowHalf` is used to limit the range of eye rotation angle that the back of the eyes does not rotate to the front.
 
 ```javascript
 function onWindowResize() {
