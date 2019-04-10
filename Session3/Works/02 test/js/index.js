@@ -1,7 +1,7 @@
 //Global variables
 var scene, camera, renderer;
 var geometry, material, mesh;
-var geometry1, material1, mesh1;
+var geometry1;
 var color;
 
 //Rotation converter
