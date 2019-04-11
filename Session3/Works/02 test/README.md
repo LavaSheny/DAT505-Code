@@ -59,11 +59,12 @@ material = new THREE.MeshLambertMaterial({
   color:color,
   transparent: true
 });
-
+...
 mesh = new THREE.Mesh( geometry, material );
 mesh.position.set(0,220,-1000);
 mesh.scale.set(20, 400,20);
 scene.add( mesh );
+...
 ```
 
 * Define initial values of controller to control gui.
