@@ -1,10 +1,10 @@
 test002 texture
 ========
 
-This project is to practise setting cubes' array and control cube independently in the array.
+This project is to practise setting cubes' array and let cubes' scales increasing continually in range.
 
 #### Description ####
-Array of cubes are arranged in x and y axes and code controls one of the cubes independently.
+Array of cubes are arranged in x and y axes. They rotate and expand continually.
 
 #### Usage ####
 ```html
@@ -34,61 +34,78 @@ function init() {
     renderer = new THREE.WebGLRenderer({antialias:true});
     renderer.setClearColor(0x17293a);
     renderer.setSize(W, H);
-    console.log("Init end");
-    console.log("DrawFrame Starts ******");
     document.body.appendChild(renderer.domElement);
     controls = new THREE.OrbitControls(camera, renderer.domElement);
 }
 }
 ```
 
-* Create a two dimensional grid of objects, and position them accordingly. Value starts from -10 and sequentially add one every 5 pixels. Create random values for x and y, and store them for giving values to independent rotation. Individually define cube color according to coordinate postion.`Math.random() * 2 * Math.PI` means that mesh rotates 360 degrees.
-
-![cube color](https://github.com/LavaSheny/DAT505-Code/blob/master/Session5/Works/test001%20control%20cube%20independent/images/cube%20color.jpg)
+* Create a two dimensional grid of objects, and position them accordingly. Value starts from -10 and sequentially add one every 5 pixels. Create random round figures from `0` to `4` for textures to load random images, and define texture1 or texture2 for boxGeometry whose coordinate is (-5,-5) or (5,5). Texture3 is add to remaining boxGeometries. `Math.random() * 2 * Math.PI` means that mesh rotates 360 degrees. Set scale and rot array to store random values.
 
 ```javascript
-var randomRotationX = [];
-var randomRotationY = [];
+var rotX = [];
+var rotY = [];
+var scaleX = [];
+var scaleY = [];
+var scaleZ = [];
 for (var x = -10; x <= 10; x += 5) {
-for (var y = -10; y <= 10; y += 5) {
+  for (var y = -10; y <= 10; y += 5) {
 
-  var boxGeometry = new THREE.BoxGeometry(3, 3, 3);
-  if (x==-5 && y==-5){
-    boxMaterial = new THREE.MeshLambertMaterial({color: 0xF67280});
-  } else if (x==5 && y ==5){
-    boxMaterial = new THREE.MeshLambertMaterial({color: 0xF8B195});
-  } else {
-    boxMaterial = new THREE.MeshLambertMaterial({color: 0x355C7D});
+    var boxGeometry = new THREE.BoxGeometry(3, 3, 3);
+    var texture1 = new THREE.TextureLoader().load( "textures/texture" + Math.floor(Math.random()*4) +".jpg");
+    var texture2 = new THREE.TextureLoader().load( "textures/texture" + Math.floor(Math.random()*4) +".jpg");
+    var texture3 = new THREE.TextureLoader().load( "textures/texture" + Math.floor(Math.random()*4) +".jpg");
+
+    var boxMaterial = new THREE.MeshLambertMaterial({map: texture1});
+
+    if (x==-5 && y==-5){
+      boxMaterial = new THREE.MeshLambertMaterial({map: texture1});
+    } else if (x==5 && y ==5){
+      boxMaterial = new THREE.MeshLambertMaterial({map: texture2});
+    } else {
+      boxMaterial = new THREE.MeshLambertMaterial({map: texture3});
+    }
+
+    var mesh = new THREE.Mesh(boxGeometry, boxMaterial);
+    mesh.position.x = x;
+    mesh.position.z = y;
+    mesh.rotation.x = Math.random() * 2 * Math.PI;;
+    mesh.rotation.y = Math.random() * 2 * Math.PI;;
+    mesh.rotation.z = Math.random() * 2 * Math.PI;;
+    var rotValX = (Math.random() * 0.05) - 0.025;
+    var rotValY = (Math.random() * 0.05) - 0.025;
+    var scValX = Math.random() - 0.05;
+    var scValY = Math.random() - 0.05;
+    var scValZ = Math.random() - 0.05;
+    rotX.push(rotValX);
+    rotY.push(rotValY);
+    scaleX.push(scValX);
+    scaleY.push(scValY);
+    scaleZ.push(scValZ);
+    scaleCube.push(scValX);
+    scene.add(mesh);
+    cubes.push(mesh);
   }
-
-  var mesh = new THREE.Mesh(boxGeometry, boxMaterial);
-  mesh.position.x = x;
-  mesh.position.z = y;
-  mesh.rotation.x = Math.random() * 2 * Math.PI;;
-  mesh.rotation.y = Math.random() * 2 * Math.PI;;
-  mesh.rotation.z = Math.random() * 2 * Math.PI;;
-var randomValueX = (Math.random() * 0.1)- 0.05;
-  randomSpeedX.push(randomValueX);
-  scene.add(mesh);
-  cubes.push(mesh);
-}
 }
 ```
 
-* Plug random values into formula that each cube has different random rotation speeds.
-Code independently control part of the array `cubes[i]` by assigning values to it.
-
-![cube(i)](https://github.com/LavaSheny/DAT505-Code/blob/master/Session5/Works/test001%20control%20cube%20independent/images/cube%5Bi%5D.jpg)
+* Plug random values into formula that each cube has different rotation speeds and scales which are increasing continually. Set `scaleCube[i]` to limit the growth of scales.
 
 ```javascript
 var cubes = [];
+var scaleCube = [];
 function drawFrame(){
   requestAnimationFrame(drawFrame);
+  scaleCube += 0.01;
 
-  for (var i = 0; i < 5; i ++){
-    cubes[6].rotation.x += randomSpeedX[6];
-    cubes[18].rotation.x += randomSpeedX[18];
-  }
+  cubes.forEach(function(c, i) {
+    c.rotation.x += rotX[i];
+    c.rotation.y += rotY[i];
+    c.scale.x += rotY[i];
+    scaleCube[i] += scaleX[i];
+    if ( scaleCube[i] >  scaleX[i] ) scaleCube[i] =  -scaleX[i];
+
+  });
   renderer.render(scene, camera);
 }
 ```
