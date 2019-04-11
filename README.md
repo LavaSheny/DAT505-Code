@@ -1,4 +1,4 @@
-![Logo of Team 02](https://github.com/LavaSheny/DAT505-Code/blob/master/Images/Team%20Logo.jpg.jpg)
+![Logo of Team 02](https://github.com/LavaSheny/DAT505-Code/blob/master/Images/Team%20Logo.jpg)
 
 DAT505-Code
 ========
