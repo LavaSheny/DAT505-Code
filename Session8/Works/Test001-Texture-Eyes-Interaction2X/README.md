@@ -119,7 +119,10 @@ for (var i = 0; i < eyesNum; i++) {
 
 * Define the eyes rotation range which according to `map_range` to let eyes rotate and look at the moving mouse. For example, `x = 140` is the positon of the midpoint of the left eyes on the x-axis. It is a watershed to determine whether the eyes look left or right. `y = 810` is the positon of the midpoint of the downside eyes on the y-axis. It is a watershed to determine whether the eyes look up or down.
 
-![eyes(1)](/images/Eye1.jpg)
+![eyes(1)](https://github.com/LavaSheny/DAT505-Code/blob/master/Session8/Works/Test001-Texture-Eyes-Interaction2X/images/Eye1.jpg)
+![eyes(2)](https://github.com/LavaSheny/DAT505-Code/blob/master/Session8/Works/Test001-Texture-Eyes-Interaction2X/images/Eye2.jpg)
+![eyes(3)](https://github.com/LavaSheny/DAT505-Code/blob/master/Session8/Works/Test001-Texture-Eyes-Interaction2X/images/Eye3.jpg)
+![eyes(4)](https://github.com/LavaSheny/DAT505-Code/blob/master/Session8/Works/Test001-Texture-Eyes-Interaction2X/images/Eye4.jpg)
 
 ```javascript
 function render() {
