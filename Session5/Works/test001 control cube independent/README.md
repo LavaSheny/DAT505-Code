@@ -44,7 +44,7 @@ function init() {
 
 * Create a two dimensional grid of objects, and position them accordingly. Value starts from -10 and sequentially add one every 5 pixels. Create random values for x and y, and store them for giving values to independent rotation. Individually define cube color according to coordinate postion.`Math.random() * 2 * Math.PI` means that mesh rotates 360 degrees.
 
-![cube color](https://github.com/LavaSheny/DAT505-Code/blob/master/Session5/Works/test001 control cube independent/images/cube color.jpg)
+![cube color](https://github.com/LavaSheny/DAT505-Code/blob/master/Session5/Works/test001%20control%20cube%20independent/images/cube%20color.jpg)
 
 ```javascript
 var randomRotationX = [];
@@ -78,7 +78,7 @@ var randomValueX = (Math.random() * 0.1)- 0.05;
 * Plug random values into formula that each cube has different random rotation speeds.
 Code independently control part of the array `cubes[i]` by assigning values to it.
 
-![cube(i)](https://github.com/LavaSheny/DAT505-Code/blob/master/Session5/Works/test001 control cube independent/images/cube[i].jpg)
+![cube(i)](https://github.com/LavaSheny/DAT505-Code/blob/master/Session5/Works/test001%20control%20cube%20independent/images/cube%5Bi%5D.jpg)
 
 ```javascript
 var cubes = [];
