@@ -36,8 +36,9 @@ function init(){
   var light2 = new THREE.PointLight(0xffffff, 0.5);
   scene.add(light2);
 
-  // Create a Cube Mesh with basic material ---------
+  // Create a Cube Mesh with Lambert material ---------
   geometry = new THREE.BoxGeometry;
+  // Create a Torus Mesh with Lambert material ---------
   geometry1 = new THREE.TorusGeometry;
 
  //255,255,255
@@ -47,8 +48,6 @@ function init(){
     transparent: true
   });
 
-//  material = new THREE.MeshBasicMaterial( { color: "#FF00FF" } );
-//  material = new THREE.MeshNormalMaterial( );
   mesh = new THREE.Mesh( geometry, material );
   mesh.position.set(0,220,-1000);
   mesh.scale.set(20, 400,20);
@@ -58,11 +57,13 @@ function init(){
   mesh1 = new THREE.Mesh( geometry1, material );
   mesh1.position.set(0, -3, -1000);
   mesh1.scale.set(20, 20, 20, 20);
+  // Add mesh to scene
   scene.add( mesh1 );
 
   mesh2 = new THREE.Mesh( geometry1, material );
   mesh2.position.set(200, -280, -1000);
   mesh2.scale.set(15, 15, 15, 15);
+  // Add mesh to scene
   scene.add( mesh2 );
 
   mesh3 = new THREE.Mesh( geometry, material );
@@ -80,6 +81,7 @@ function init(){
   mesh5 = new THREE.Mesh( geometry1, material );
   mesh5.position.set(300, -200, -1000);
   mesh5.scale.set(20, 20, 20, 20);
+  // Add mesh to scene
   scene.add( mesh5 );
 
   mesh6 = new THREE.Mesh( geometry, material );
@@ -93,6 +95,7 @@ function init(){
   mesh7.position.set(430, -40, -1000);
   mesh7.scale.set(15, 15, 15, 15);
   mesh7.rotation.z = de2ra(45);
+  // Add mesh to scene
   scene.add( mesh7 );
 
   mesh8 = new THREE.Mesh( geometry, material );
@@ -125,6 +128,7 @@ function init(){
   mesh12 = new THREE.Mesh( geometry1, material );
   mesh12.position.set(393, 95, -1000);
   mesh12.scale.set(15, 15, 15, 15);
+  // Add mesh to scene
   scene.add( mesh12 );
 
   mesh13 = new THREE.Mesh( geometry, material );
@@ -143,6 +147,7 @@ function init(){
   mesh15 = new THREE.Mesh( geometry1, material );
   mesh15.position.set(525, -140, -1000);
   mesh15.scale.set(15, 15, 15, 15);
+  // Add mesh to scene
   scene.add( mesh15 );
 
   mesh16 = new THREE.Mesh( geometry, material );
@@ -161,6 +166,7 @@ function init(){
   mesh18 = new THREE.Mesh( geometry1, material );
   mesh18.position.set(583, -110, -1000);
   mesh18.scale.set(15, 15, 15, 15);
+  // Add mesh to scene
   scene.add( mesh18 );
 
   mesh19 = new THREE.Mesh( geometry, material );
@@ -179,6 +185,7 @@ function init(){
   mesh21 = new THREE.Mesh( geometry1, material );
   mesh21.position.set(145, -130, -1000);
   mesh21.scale.set(15, 15, 15, 15);
+  // Add mesh to scene
   scene.add( mesh21 );
 
   mesh22 = new THREE.Mesh( geometry, material );
@@ -197,6 +204,7 @@ function init(){
   mesh24 = new THREE.Mesh( geometry1, material );
   mesh24.position.set(200, 230, -1000);
   mesh24.scale.set(15, 15, 15, 15);
+  // Add mesh to scene
   scene.add( mesh24 );
 
   mesh25 = new THREE.Mesh( geometry, material );
@@ -215,15 +223,13 @@ function init(){
   mesh27 = new THREE.Mesh( geometry1, material );
   mesh27.position.set(140, 270, -1000);
   mesh27.scale.set(15, 15, 15, 15);
+  // Add mesh to scene
   scene.add( mesh27 );
-
-
-
-
 
   mesh28 = new THREE.Mesh( geometry1, material );
   mesh28.position.set(-200, -280, -1000);
   mesh28.scale.set(15, 15, 15, 15);
+  // Add mesh to scene
   scene.add( mesh28 );
 
   mesh29 = new THREE.Mesh( geometry, material );
@@ -241,6 +247,7 @@ function init(){
   mesh31 = new THREE.Mesh( geometry1, material );
   mesh31.position.set(-300, -200, -1000);
   mesh31.scale.set(20, 20, 20, 20);
+  // Add mesh to scene
   scene.add( mesh31 );
 
   mesh32 = new THREE.Mesh( geometry, material );
@@ -254,6 +261,7 @@ function init(){
   mesh33.position.set(-430, -40, -1000);
   mesh33.scale.set(15, 15, 15, 15);
   mesh33.rotation.z = de2ra(-45);
+  // Add mesh to scene
   scene.add( mesh33 );
 
   mesh34 = new THREE.Mesh( geometry, material );
@@ -286,6 +294,7 @@ function init(){
   mesh38 = new THREE.Mesh( geometry1, material );
   mesh38.position.set(-393, 95, -1000);
   mesh38.scale.set(15, 15, 15, 15);
+  // Add mesh to scene
   scene.add( mesh38 );
 
   mesh39 = new THREE.Mesh( geometry, material );
@@ -304,6 +313,7 @@ function init(){
   mesh41 = new THREE.Mesh( geometry1, material );
   mesh41.position.set(-525, -140, -1000);
   mesh41.scale.set(15, 15, 15, 15);
+  // Add mesh to scene
   scene.add( mesh41 );
 
   mesh42 = new THREE.Mesh( geometry, material );
@@ -322,6 +332,7 @@ function init(){
   mesh44 = new THREE.Mesh( geometry1, material );
   mesh44.position.set(-583, -110, -1000);
   mesh44.scale.set(15, 15, 15, 15);
+  // Add mesh to scene
   scene.add( mesh44 );
 
   mesh45 = new THREE.Mesh( geometry, material );
@@ -340,6 +351,7 @@ function init(){
   mesh47 = new THREE.Mesh( geometry1, material );
   mesh47.position.set(-145, -130, -1000);
   mesh47.scale.set(15, 15, 15, 15);
+  // Add mesh to scene
   scene.add( mesh47 );
 
   mesh48 = new THREE.Mesh( geometry, material );
@@ -358,6 +370,7 @@ function init(){
   mesh50 = new THREE.Mesh( geometry1, material );
   mesh50.position.set(-200, 230, -1000);
   mesh50.scale.set(15, 15, 15, 15);
+  // Add mesh to scene
   scene.add( mesh50 );
 
   mesh51 = new THREE.Mesh( geometry, material );
@@ -402,7 +415,6 @@ function init(){
  var f1 = gui.addFolder('Scale');
  var f2 = gui.addFolder('Position');
  var f3 = gui.addFolder('Rotation');
- //Add the first controller (scaleX)
  f1.add(controller,'scaleX',0.5,500).onChange(function(){
     mesh.scale.x = (controller.scaleX);
  });
@@ -424,15 +436,12 @@ function init(){
  });
 
  f3.add(controller,'rotationX',-180,180).onChange(function(){
-   //mesh.rotation.x = de2ra(controller.rotationX);
    mesh.rotation.x = de2ra(controller.rotationX);
  });
  f3.add(controller,'rotationY',-180,180).onChange(function(){
-  // mesh.rotation.y = de2ra(controller.rotationY);
    mesh.rotation.y = de2ra(controller.rotationY);
  });
  f3.add(controller,'rotationZ',-180,180).onChange(function(){
-   //mesh.rotation.z = de2ra(controller.rotationZ);
    mesh.rotation.z = de2ra(controller.rotationZ);
  });
 
@@ -443,7 +452,9 @@ function init(){
   material.opacity = (controller.boxOpacity);
 });
 
+////Create a new DAT.GUI
 var gui = new dat.GUI();
+ //Define the folders' name
 var f4 = gui.addFolder('Scale');
 var f5 = gui.addFolder('Position');
 var f6 = gui.addFolder('Rotation');
@@ -467,22 +478,17 @@ f5.add(controller,'positionZ',-1000,1000).onChange(function(){
 });
 
 f6.add(controller,'rotationX',-180,180).onChange(function(){
-  //mesh.rotation.x = de2ra(controller.rotationX);
   mesh1.rotation.x = de2ra(controller.rotationX);
 });
 f6.add(controller,'rotationY',-180,180).onChange(function(){
- // mesh.rotation.y = de2ra(controller.rotationY);
   mesh1.rotation.y = de2ra(controller.rotationY);
 });
 f6.add(controller,'rotationZ',-180,180).onChange(function(){
-  //mesh.rotation.z = de2ra(controller.rotationZ);
   mesh1.rotation.z = de2ra(controller.rotationZ);
 });
 
 }
 
-//  mesh.rotation.x += 0.01; //Continuously rotate the mesh
-//  mesh.rotation.y += 0.01;
 var render = function () {
   requestAnimationFrame( render );
   renderer.setClearColor("#000000");

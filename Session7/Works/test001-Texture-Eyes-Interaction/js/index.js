@@ -29,14 +29,16 @@ function init() {
 	var light = new THREE.PointLight( 0xffffff, 1 );
 	camera.add( light );
 
+	// Create a SphereGeometry with PhongMaterial
+	var geometry = new THREE.SphereGeometry( 30, 32, 16 );
+
 	var material = new THREE.MeshPhongMaterial( {
 		color: 0xffffff,
 		specular: 0x050505,
 		shininess: 50,
+		// Load a texture
 		map: THREE.ImageUtils.loadTexture('images/eye.png'),
 	});
-
-	var geometry = new THREE.SphereGeometry( 30, 32, 16 );
 
 
   // modify UVs to accommodate MatCap texture
@@ -49,7 +51,7 @@ function init() {
 			uvs[ j ].y = face.vertexNormals[ j ].y * 0.5 + 0.5;
 		}
 	}
-
+ // set eye positions and scales
 		for (var i = 0; i < eyesNum; i++) {
 			mesh = new THREE.Mesh( geometry, material );
 
@@ -88,6 +90,7 @@ function render() {
 	eyes[i].rotation.x = mouseY/window.innerHeight*2;
 	eyes[i].rotation.y = mouseX/window.innerWidth*2;
 }
+	// Render everything using the created renderer, scene, and camera
 	renderer.render( scene, camera );
 }
 

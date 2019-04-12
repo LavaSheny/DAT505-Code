@@ -65,9 +65,6 @@ function animate() {
 			cubes[i].rotation.x += speed[i] / 100;
 			// Rotate the y position of the mesh by 0.02
 			cubes[i].rotation.y += speed[i] / 80;
-
-
-
 			//Move the mesh towards the bottom of the screen
 			cubes[i].position.y -= speed[i];
 

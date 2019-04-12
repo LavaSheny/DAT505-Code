@@ -56,7 +56,7 @@ function init() {
 }
 ```
 
-* Define the faces of eyes' texture.
+* Modify UVs to accommodate MatCap texture.
 
 ```javascript
 var faceVertexUvs = geometry.faceVertexUvs[ 0 ];

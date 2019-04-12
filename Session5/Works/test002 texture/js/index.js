@@ -30,7 +30,7 @@ function init() {
   controls = new THREE.OrbitControls(camera, renderer.domElement);
 
   //Create a two dimensional grid of objects, and position them accordingly
-  for (var x = -10; x <= 10; x += 5) { // Start from -35 and sequentially add one every 5 pixels
+  for (var x = -10; x <= 10; x += 5) { // Start from -10 and sequentially add one every 5 pixels
     for (var y = -10; y <= 10; y += 5) {
 
       var boxGeometry = new THREE.BoxGeometry(3, 3, 3);
@@ -39,7 +39,7 @@ function init() {
       var texture3 = new THREE.TextureLoader().load( "textures/texture" + Math.floor(Math.random()*4) +".jpg");
 
       var boxMaterial = new THREE.MeshLambertMaterial({map: texture1});
-
+//Define diffierent textures to boxMaterial
       if (x==-5 && y==-5){
         boxMaterial = new THREE.MeshLambertMaterial({map: texture1});
       } else if (x==5 && y ==5){

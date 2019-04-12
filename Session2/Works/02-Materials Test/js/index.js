@@ -28,16 +28,15 @@ scene.add(light1);
 var light2 = new THREE.PointLight(0xffffff, 0.5);
 scene.add(light2);
 
-//初始化dat.GUI简化试验流程
+//Initial dat.GUI
 function initGui() {
-//声明一个保存需求修改的相关数据的对象
 gui = {
 };
 var datGui = new dat.GUI();
-//将设置属性添加到gui当中，gui.add(对象，属性，最小值，最大值）
+//Add property setting to GUI, gui.add(Object, Attributes, Minimum, Maximum)
 }
 
-//初始化性能插件
+//Initial performance plug-in
 function initStats() {
         stats = new Stats();
         document.body.appendChild(stats.dom);
@@ -46,24 +45,12 @@ function initStats() {
 function initControls() {
 
         controls = new THREE.OrbitControls(camera, renderer.domElement);
-        //设置控制器的中心点
-        //controls.target.set( 0, 5, 0 );
-        // 如果使用animate方法时，将此函数删除
-        //controls.addEventListener( 'change', render );
-        // 使动画循环使用时阻尼或自转 意思是否有惯性
         controls.enableDamping = true;
-        //动态阻尼系数 就是鼠标拖拽旋转灵敏度
-        //controls.dampingFactor = 0.25;
-        //是否可以缩放
         controls.enableZoom = true;
-        //是否自动旋转
         controls.autoRotate = false;
         controls.autoRotateSpeed = 0.5;
-        //设置相机距离原点的最远距离
         controls.minDistance = 1;
-        //设置相机距离原点的最远距离
         controls.maxDistance = 2000;
-        //是否开启右键拖拽
         controls.enablePan = true;
     }
 
@@ -111,7 +98,7 @@ var material4 = new THREE.MeshNormalMaterial();
 var material9 = new THREE.MeshNormalMaterial();
 var material12 = new THREE.MeshNormalMaterial();
 
-//辅助工具
+//Auxiliary tools
 var helper = new THREE.AxesHelper(50);
 scene.add(helper);
 var video = document.querySelector("#video");
@@ -244,10 +231,9 @@ var render = function () {
   mesh12.rotation.y = rot;
 
   function animate() {
-      //更新控制器
       render();
 
-      //更新性能插件
+      //Update performance plug-in
       stats.update();
 
       controls.update();
@@ -258,7 +244,7 @@ var render = function () {
   }
 
   function draw() {
-      //兼容性判断
+      //Judge compatibility
       if (!Detector.webgl) Detector.addGetWebGLMessage();
 
       initGui();

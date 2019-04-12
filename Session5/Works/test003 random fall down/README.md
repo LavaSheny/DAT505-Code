@@ -47,7 +47,7 @@ function init() {
 }
 ```
 
-* Plug random values into formula that each cube has different rotation speeds and move the mesh towards the bottom of the screen. If the mesh passes the bottom of the screen, code makes it appear on the top. Also x position is randomized.
+* Plug random values into formula that each cube has different rotation speeds and move the mesh towards the bottom of the screen. If the mesh passes the bottom of the screen, code`cubes[i].position.y -= speed[i]` makes it appear on the top. Also x position is randomized.
 
 ```javascript
 function animate() {

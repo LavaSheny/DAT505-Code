@@ -1,4 +1,4 @@
-02-Materials Test
+M02-Materials Test
 ========
 
 This project is to practise defining different Materials and adding different textures to different geometries.

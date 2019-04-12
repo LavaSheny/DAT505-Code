@@ -5,7 +5,7 @@ DAT505-Code
 
 This is (**B161006079**)Yang Shen's code projects for DAT505 module. Member of Team 02 "Hard Core".
 
-The homeworks which include `README` file are listed as below:
+The homeworks which include independent `README` file are listed as below:
 1. Session1
    * Test001-geometry
 
@@ -29,3 +29,6 @@ The homeworks which include `README` file are listed as below:
 7. Session8
    * Test001-Texture-Eyes-Interaction2X
    * Test002-objLoader-Raycasting
+
+8. Session9
+   * Test001-RaycastAudio

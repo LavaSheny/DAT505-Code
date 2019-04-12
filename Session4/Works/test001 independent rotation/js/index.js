@@ -36,12 +36,10 @@ function init() {
       //mesh.castShadow = true;
       mesh.position.x = x;
       mesh.position.z = y;
-      //mesh.scale.y = 0.5;
+      mesh.scale.y = 0.5;
       mesh.rotation.x = Math.random() * 2 * Math.PI;;
       console.log( "First" + Math.random() * 2 * Math.PI);
       console.log( "Second" + Math.random() * 2 * Math.PI);
-      //mesh.rotation.y = Math.random() * 2 * Math.PI;;
-      //mesh.rotation.z = Math.random() * 2 * Math.PI;;
       //Create random values for x and y, and store them
   var randomValueX = (Math.random() * 0.1)- 0.05;
   var randomValueY = (Math.random() * 0.1)- 0.05;

@@ -51,7 +51,7 @@ function geometry(){
 // Add mesh to scene
   scene.add( mesh2 );
 
-// Create a Cube Mesh with basic material ---------
+// Create a Ball Mesh with basic material ---------
   geometry3 = new THREE.SphereGeometry(50, 50, 50);
   material3 = new THREE.MeshBasicMaterial( { color: "#F5F5F5" } );
   mesh3 = new THREE.Mesh( geometry3, material3 );
@@ -101,7 +101,7 @@ function geometry(){
 // Add mesh to scene
   scene.add( mesh7 );
 
-// Create a Cube Mesh with basic material ---------
+// Create a Ball Mesh with normal material ---------
   geometry8 = new THREE.SphereGeometry(35,35,35);
   material8 = new THREE.MeshNormalMaterial( { color: "#000000" } );
   mesh8 = new THREE.Mesh( geometry8, material8 );
@@ -112,7 +112,7 @@ function geometry(){
 //{color}
    scene.add( mesh8 );
 
-// Create a Cube Mesh with basic material ---------
+// Create a Icosahedron Mesh with basic material ---------
   geometry9 = new THREE.IcosahedronGeometry( 200,1 );
   material9 = new THREE.MeshBasicMaterial( {wireframe : true} );
   mesh9 = new THREE.Mesh( geometry9, material9 );

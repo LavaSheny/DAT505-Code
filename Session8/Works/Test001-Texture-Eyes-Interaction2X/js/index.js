@@ -33,12 +33,14 @@ function init() {
 	var light = new THREE.PointLight( 0xffffff, 1 );
 	camera.add( light );
 
+	// Create a SphereGeometry with PhongMaterial
 	var geometry = new THREE.SphereGeometry( 30, 32, 16 );
 
 	var material = new THREE.MeshPhongMaterial( {
 		color: 0xffffff,
 		specular: 0x050505,
 		shininess: 50,
+	  // Load a texture
 		map: THREE.ImageUtils.loadTexture('images/eye.png'),
 	});
 
@@ -110,6 +112,7 @@ function animate() {
 
 function render() {
 	console.log(mouseY)
+	//Define range of rotation angles of eyesNum
 	for (var i = 0; i < eyesNum; i++) {
 
 		eyes[0].rotation.y = map_range(mouseX, 0, window.innerWidth, -1.14, 1.14);
@@ -135,6 +138,7 @@ function render() {
 		if (mouseY<35) eyes[4].rotation.x = map_range(mouseY, 0, 35, 0, 0.25);
 		else eyes[4].rotation.x = map_range(mouseY, 35, window.innerHeight, 0.25, 1.14);
   }
+	// Render everything using the created renderer, scene, and camera
 	renderer.render( scene, camera );
 }
 

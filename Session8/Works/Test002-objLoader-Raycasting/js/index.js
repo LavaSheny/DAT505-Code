@@ -24,7 +24,7 @@ function init() {
   scene.add( light );
 
   var geometry = new THREE.BoxBufferGeometry( 20, 20, 20 );
-
+  //Define the number of objects
   for (var i=0; i<70; i++){
 
   // Model/material loading!

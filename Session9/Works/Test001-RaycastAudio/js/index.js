@@ -36,18 +36,18 @@ function init() {
   scene.add( light );
 
   var geometry = new THREE.BoxBufferGeometry( 20, 20, 20 );
-
-  for (var i=0; i<500; i++){
+  //Define the number of objects
+  for (var i=0; i<70; i++){
   // Model/material loading!
 	var mtlLoader = new THREE.MTLLoader();
-	mtlLoader.load("Blocks.mtl", function(materials){
+	mtlLoader.load("ring.mtl", function(materials){
 
 		materials.preload();
 
     var objLoader = new THREE.OBJLoader();
 		objLoader.setMaterials(materials);
 
-  		objLoader.load("ship.obj", function(mesh){
+  		objLoader.load("ring.obj", function(mesh){
   			mesh.traverse(function(node){
   				if( node instanceof THREE.Mesh ){
   					node.castShadow = true;
@@ -56,7 +56,7 @@ function init() {
   			});
         var sizeRand = Math.random() * 0.5;
         mesh.scale.set(sizeRand,sizeRand,sizeRand);
-        mesh.position.set(Math.random()*800-400, Math.random()*800-400, Math.random()*800-400);
+        mesh.position.set(Math.random()*200-100, Math.random()*200-100, Math.random()*200-100);
         mesh.rotation.y = -Math.PI/Math.random()*4;
 
         scene.add(mesh);
