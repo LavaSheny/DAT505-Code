@@ -86,7 +86,7 @@ var controller = new function(){
 }
 ```
 
-* Create gui and set `f1, f2, f3` options in gui folder. Define control range of each option. There are two gui in all that they are used to control two kinds of geometries to calculate the positon coordinates for each mesh.
+* Create gui and set `f1, f2, f3` options in gui folder. Define control range of each option. There are two guis in all that they are used to control two kinds of geometries to calculate the positon coordinates for each mesh.
 
 ```javascript
 var gui = new dat.GUI();
