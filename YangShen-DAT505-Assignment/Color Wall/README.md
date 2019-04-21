@@ -3,7 +3,7 @@
 ### Yang Shen B161006079 ###
 
 #### Links ####
-[DAT505-Code Github](https://github.com/LavaSheny/DAT505-Code.git)
+[DAT505-Code Github](https://github.com/LavaSheny/DAT505-Code/tree/master/YangShen-DAT505-Assignment/Color%20Wall)
 
 #### final screen composition ####
 ![final screen composition](image/1.png)
