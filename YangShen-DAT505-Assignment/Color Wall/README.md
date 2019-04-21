@@ -245,7 +245,7 @@ if ( sphere.position.z > 30 ) {
     }
 ```
 
-* Define screen size and implement mouse movement events
+* Define screen size and implement mouse movement events.
 
 ```javascript
 function onWindowResize() {
