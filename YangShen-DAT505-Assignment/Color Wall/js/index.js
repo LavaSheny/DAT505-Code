@@ -106,7 +106,7 @@ for (var y = -150; y < 150; y += 5) { // Start from -150 and sequentially add on
      });
      gui.add( controller, 'sphereOpacity', 0, 1 ).onChange( function() {
      sphere.material.opacity = (controller.sphereOpacity);
-
+		 });
 		 // Set switch options
 		 gui.add( controller, 'mouseMode', false, true ).onChange( function() {
      if(controller.mouseMode){
