@@ -27,8 +27,9 @@ The homeworks which include independent `README` file are listed as below:
    * test001-Texture-Eyes-Interaction
 
 7. Session8
-   * Test001-Texture-Eyes-Interaction2X
    * Test002-objLoader-Raycasting
+   * Test001-Texture-Eyes-Interaction2X
+   * Test002-Texture-Eyes-Interaction2X
 
 8. Session9
    * Test001-RaycastAudio

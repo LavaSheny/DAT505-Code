@@ -2,17 +2,40 @@
 ========
 ### Yang Shen B161006079 ###
 
+#### Catalog ####
+Color Wall
+* audio (sound sourse)
+  * BackwardCymbalCrashwithEcho.mp3
+  * BongoAccent.mp3
+  * CongaTap.mp3
+  * SingleRubofWashboard.mp3
+* build
+  * three.min.js
+* css
+  * style.css
+* images (final screen composition)
+  * 1.png
+  * 2.png
+  * 3.png
+  * 4.png
+* js
+  * dat.gui.min.js
+  * index.js
+  * OrbitControls.js
+* index.html
+* README.md
+
 #### Links ####
 [DAT505-Code Github](https://github.com/LavaSheny/DAT505-Code/tree/master/YangShen-DAT505-Assignment/Color%20Wall)
 
 #### final screen composition ####
-![final screen composition](image/1.png)
+![final screen composition](images/1.png)
 
-![final screen composition](image/2.png)
+![final screen composition](images/2.png)
 
-![final screen composition](image/3.png)
+![final screen composition](images/3.png)
 
-![final screen composition](image/4.png)
+![final screen composition](images/4.png)
 
 #### An audiovisual interactive composition ####
 This final project applies to the `cube array`, `color GUI` and `look at` knowledge in the first three weeks of classroom cases. I also have tried to explore the music visualization but it is not easy to implement in my code. Because my scene contains a lot of cubes with different colors on different faces that although cubes' rotations can be colorful, it can easily collapse when combined with sound frequencies. Thus, I changed my train of thought to let the interaction between people and cubes emit sounds instead of music driving the change of cubes, which is just the opposite of previous ideas.
