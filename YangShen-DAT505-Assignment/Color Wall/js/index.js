@@ -38,10 +38,10 @@ function init() {
 	   scene.add( new THREE.AmbientLight( 0xffffff, 0.2 ) );
  var light = new THREE.PointLight( 0xffffff, 1 );
 	   camera.add( light );
-     // Create a sphere to drive cube to rotate
+     // Create a sphere to drive cubes to rotate
      sphere = new THREE.Mesh( new THREE.SphereGeometry( 5, 10, 10 ), new THREE.MeshNormalMaterial({transparent: true}) );
      scene.add( sphere );
-     // Create cube to look at moving sphere and rotate to follow sphere's position
+ // Create cube to look at moving sphere and rotate to follow sphere's position
  var geometry = new THREE.BoxGeometry( 15, 15, 15 );
 	   geometry.rotateX( Math.PI / 2 );
      // Set 6 face colors of cube
@@ -51,7 +51,7 @@ function init() {
 		 color4 = Math.random()*0xffffff;
 		 color5 = Math.random()*0xffffff;
 		 color6 = Math.random()*0xffffff;
-// Add colors to material independently
+ // Add colors to material independently
  var material = [];
      material[0] = new THREE.MeshBasicMaterial({ color: color1});
      material[1] = new THREE.MeshBasicMaterial({ color: color2});
